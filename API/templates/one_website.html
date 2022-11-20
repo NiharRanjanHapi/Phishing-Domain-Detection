@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form action="/oneres" method="POST">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Predict One Website</legend>
+                <div class="form-group">
+                    {{ form.time_response.label(class="form-controle-lable") }}
+                    {{ form.time_response(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.ttl_hostname.label(class="form-controle-lable") }}
+                    {{ form.ttl_hostname(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.asn_ip.label(class="form-controle-lable") }}
+                    {{ form.asn_ip(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.length_url.label(class="form-controle-lable") }}
+                    {{ form.length_url(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.domain_length.label(class="form-controle-lable") }}
+                    {{ form.domain_length(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.time_domain_activation.label(class="form-controle-lable") }}
+                    {{ form.time_domain_activation(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.time_domain_expiration.label(class="form-controle-lable") }}
+                    {{ form.time_domain_expiration(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.qty_vowels_domain.label(class="form-controle-lable") }}
+                    {{ form.qty_vowels_domain(class="form-controle form-controle-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.directory_length.label(class="form-controle-lable") }}
+                    {{ form.directory_length(class="form-controle form-controle-lg") }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div>
+        {{ time_response }}
+    </div>
+{% endblock content %}

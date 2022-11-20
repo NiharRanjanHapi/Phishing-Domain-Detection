@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    {% set pred=model.predict(data) %}
+    {% if pred %}
+        <h1>The Website is Phishing Website</h1>
+    {% else %}
+        <h1>The Website is Safe</h1>
+    {% endif %}
+    
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% set df=df[impf] %}
+    {% set pred=model.predict(df) %}
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>&emsp;</th>
+            <th>Phishing</th>
+        </tr>
+        {% for i in ind %}
+            {% set item_1 = ind[loop.index-1] %}
+            {% set item_2 = pred[loop.index-1] %}
+            <tr>
+                <td class="tab">{{ item_1 }}</td>
+                <td class="tab">&emsp;</td>
+                <td class="tab">{{ item_2 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+{% endblock content %}

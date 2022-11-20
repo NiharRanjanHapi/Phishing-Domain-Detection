@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+markupsafe= "2.0.1"
+pandas="1.4.3"
+werkzeug="2.0.3"
+WTForms="3.0.1"
+Flask-WTF="1.0.1"
+python-form="0.2.3"
+
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
